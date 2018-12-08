@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ExampleApp</string>
+    <string name="et_key">Key</string>
+    <string name="et_value">Value</string>
+    <string name="bt_add">Add</string>
+    <string name="bt_retrieve">Retrieve</string>
+</resources>
