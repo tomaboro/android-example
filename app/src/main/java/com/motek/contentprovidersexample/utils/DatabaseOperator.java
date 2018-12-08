@@ -23,6 +23,14 @@ public class DatabaseOperator {
                         (!TextUtils.isEmpty(selection) ? " AND (" + selection + ')' : ""), selectionArgs);
     }
 
+    public Cursor buildQuery(String[] projection, String selection, String[] selectionArgs, String sortOrder) {
+        SQLiteQueryBuilder qb = new SQLiteQueryBuilder();
+        qb.setTables(table);
+        qb.setProjectionMap(new HashMap<String, String>());
+
+        return qb.query(db,	projection,	selection, selectionArgs,null, null, sortOrder);
+    }
+    
     public void update(String key, String selection, String[] selectionArgs, ContentValues values) {
         db.update(table, values,
                 "key" + " = " + key +
