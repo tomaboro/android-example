@@ -15,7 +15,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 " value TEXT NOT NULL);";
     }
 
-    DatabaseHelper(Context context, String databaseName, String tableName){
+    public DatabaseHelper(Context context, String databaseName, String tableName){
         super(context, databaseName, null, 1);
         this.databaseName = databaseName;
         this.tableName = tableName;
